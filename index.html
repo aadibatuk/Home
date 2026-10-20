@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aadi Batuk - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header class="top-header">
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <h1 class="brand-title">Aadi Batuk</h1>
+  </header>
+
+  <!-- Left Side Slide-out Navigation Drawer -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <nav class="side-drawer" id="side-drawer">
+    <div class="drawer-header">
+      <h2>Aadi Batuk</h2>
+      <button class="close-btn" id="close-btn">&times;</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="hero">
+      <p>My site in under maintenence.</p>
+    </section>
+  </main>
+
+  <script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const sideDrawer = document.getElementById('side-drawer');
+    const navOverlay = document.getElementById('nav-overlay');
+
+    function openDrawer() {
+      sideDrawer.classList.add('open');
+      navOverlay.classList.add('active');
+    }
+
+    function closeDrawer() {
+      sideDrawer.classList.remove('open');
+      navOverlay.classList.remove('active');
+    }
+
+    hamburgerBtn.addEventListener('click', openDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+    navOverlay.addEventListener('click', closeDrawer);
+  </script>
+</body>
+</html>
